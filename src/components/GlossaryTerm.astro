@@ -1,0 +1,16 @@
+---
+interface Props {
+  term: string;
+}
+
+const { term } = Astro.props;
+---
+
+<dt role="term">{term}</dt>
+<dd role="definition">
+  <slot />
+</dd>
+
+<style>
+  dt { font-weight: bold; }
+</style>
